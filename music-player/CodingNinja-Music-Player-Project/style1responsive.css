@@ -1,0 +1,564 @@
+/* these are all the media queries for index.html page with the desktop first approach*/
+@media screen and (max-width: 1200px) {
+	/* animated favourites text will be hidden for this viewport width*/
+	.favs {
+		display: none !important;
+	}
+	/* reduced size of search bar */
+	.search-bar {
+		width: 30%;
+	}
+	input {
+		font-size: 11px !important;
+	}
+	.carousel img{
+		width: 180px;
+		height: auto;
+	}
+	.latest-release{
+		margin-top: 100px;
+	}
+	.popular-artist-content{
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+	.theme-main {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 10px;
+		width: 100%;
+		height: 420px;
+	}
+
+	.music-themes .theme-content img{
+		width: 100px;
+		height: 100px;
+	}
+	.theme-content p{
+		justify-content: justify;
+		align-items: center;
+		margin-top: 20px;
+	}
+	.outer-div {
+		width: 800px;
+		height: 200px;
+	}
+	.outer-div .inner-div span{
+		font-size: 5vw;
+		font-weight: 600;
+	}
+	.circle{
+		margin-left: 60px;
+	}
+	.vol-circle{
+		margin-left: 10px;
+	}
+}
+@media screen and (max-width: 800px) {
+	/* more button wiil be visible and section 2 will be hidden by default for this viewport */
+	label[for="more"] {
+		display: block;
+		background-image: linear-gradient(to bottom right, rgb(14, 32, 235), rgb(17, 41, 218), rgb(19, 51, 200), rgb(22, 60, 183), rgb(24, 70, 165), rgb(27, 79, 148), rgb(28, 102, 158), rgb(30, 125, 168), rgb(31, 148, 178), rgb(32, 170, 187), rgb(34, 193, 197), rgb(35, 216, 207));
+	}
+	/* hidden section 2 by default */
+	.section-2 {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		width: 250px;
+		height: 66vh;
+		background-color: #050043;
+		box-shadow: 0px 0px 2px 1px white;
+		right: 0px;
+		top: 23.5%;
+		z-index: 5;
+		overflow: scroll;
+		padding-left:10px;
+		transition: visibility ease-in-out 0.2s;
+		transition: opacity ease-in-out 0.2s;
+	}
+	/* Latest Release*/
+
+	.latest-release .card .song-description h3{
+		font-size: 15px;
+		font-weight: 500;
+	}
+	.latest-release .card .song-description p{
+		font-size: 8px;
+	}
+	.latest-release .card p{
+		font-size: 8px;
+	}
+	/*Playlist content */
+	.playlist-content {
+		overflow: visible;
+	}
+	.playlist-content .aut{
+		font-weight: 600;
+	}
+	.playlist-content .name{
+		font-size: 10px;
+	}
+/*Popular Artists*/
+.popular-artists h1{
+	font-size: 20px;
+}
+.popular-artists .popular-artist-content{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin: 10px;
+	grid-row-gap: 10px;
+}
+.popular-artists .popular-artist-content p{
+	font-size: 13px;
+}
+	/* re-adjusted the queue options box */
+	.queue-options {
+		position: absolute;
+		height: auto;
+		width: auto;
+		top: 7%;
+		right: 0%;
+	}
+	/* more button */
+	input[id="more"]:checked ~ .section-2 {
+		visibility: visible;
+		opacity: 1;
+	}
+	/* hide section 2 scrollbar */
+	.section-2::-webkit-scrollbar {
+		display: none;
+	}
+	/* when the section 2 is hidden, section-1 width becomes 100% to cover the whole page */
+	.section-1 {
+		width: 100%;
+	}
+	.card {
+		min-width: 250px; /* to apply the flex effect */
+	}
+	/* carousel adjustment */
+	/* carousel image */
+	.carousel img{
+		width: 200px;
+		position: relative;
+	}
+	.latest-release{
+		position: relative;
+		margin-top: 180px;
+	}
+	/* music themes section */
+	.theme-main {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 10px;
+		width: 100%;
+		height: 350px;
+	}
+	.theme-content img{
+		width: 100px;
+		height:100px;
+	}
+	/* theme content */
+	/* increased theme content size */
+	.theme-content p {
+		font-size: 20px;
+		text-align: center;
+		justify-content: center;
+	}
+	/* increased music themes image size */
+	.music-themes div img {
+		width: 12vw;
+		height: 12vw;
+	}
+	.circle{
+		margin-left: 35px;
+	}
+	.volume, .fa-volume-up{
+		display: none;
+	}
+}
+@media screen and (max-width: 700px) {
+	/* in the screens of this width, generally volume buttons are provided at the side. */
+	/* so there is no need for the volume slider at this width. so i have removed them from the display */
+	/* footer section */
+	.extras > div:nth-child(3) {
+		display: none;
+	}
+	.extras > div:nth-child(4) {
+		display: none;
+	}
+	.outer-div {
+		width: 100%;
+		height: 24vw;
+		min-width: 123px;
+		min-height: 82px;
+	}
+	.outer-div .inner-div span {
+		font-size: 4vw;
+	}
+	
+	
+}
+@media screen and (max-width: 550px) {
+	/* this is the most important media query */
+	/* navigation bar section */
+	/* website image */
+	.website-logo img {
+		height: 30px;
+		width: 30px;
+	}
+	/* website name */
+	.website-name h2 {
+		font-size: 14px;
+	}
+	/* website name */
+	.website-name h6 {
+		font-size: 8px;
+	}
+	/* notification bell */
+	.notification-bell img {
+		width: 20px;
+		height: 20px;
+	}
+	/* profile picture */
+	.profile-picture img {
+		width: 20px;
+		height: 20px;
+	}
+	/* notification bell and profile picture */
+	.notification-bell{
+		margin-top: 1px;
+	}
+	.profile-picture {
+		margin-top: 8px;
+	}
+	/* this is the image in the footer section of the page. due to less space, it has to be removed at such lower resolutions. */
+	/* there is another option, but it will look messy and small */
+
+
+	#song-image {
+		display: none;
+	}
+	footer .song-desc .name{
+		font-size: 10px;
+		font-weight: 700;
+	}
+	footer .song-desc .auth{
+		font-size: 8px;
+	}
+	footer .player .controls{
+		font-size: 10px;
+	}
+	.theme-main {
+		width: 100%;
+	}
+	/* theme content */
+	.theme-content {
+		width: 25vw;
+		height: 10vw;
+	}
+	.theme-content p {
+		font-size: 4.5vw;
+		top: -18.8vw;
+		margin-left: -2px;
+	}
+	.music-themes div img {
+		width: 18vw;
+		height: 18vw;
+	}
+
+	/* stations */
+
+	.outer-div .inner-div span {
+		font-size: 6vw;
+		font-weight: 500;
+	}
+	.language-heading{
+		font-size: 20px;
+	}
+	.language .language-content img{
+		width: 100px;
+		height: 100px;
+	}
+	.english .language-content{
+		display: grid;
+  		grid-template-columns: auto auto auto;
+		grid-gap: 5px;
+		margin: 0px 20px;
+	}
+	.english .language-content .name{
+		font-size: 15px;
+	}
+	.english .language-content .date{
+		font-size: 10px;
+	}
+	.hindi .language-content{
+		display: grid;
+  		grid-template-columns: auto auto auto;
+		grid-gap: 5px;
+		margin: 0px 20px;
+	}
+	.hindi .language-content .name{
+		font-size: 15px;
+	}
+	.hindi .language-content .date{
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 550px) {
+	/* this is the most important media query */
+	/* navigation bar section */
+	/* website image */
+	.website-logo img {
+		height: 30px;
+		width: 30px;
+	}
+	/* website name */
+	.website-name h2 {
+		font-size: 14px;
+	}
+	/* website name */
+	.website-name h6 {
+		font-size: 8px;
+	}
+	/* notification bell */
+	.notification-bell img {
+		width: 20px;
+		height: 20px;
+	}
+	/* profile picture */
+	.profile-picture img {
+		width: 20px;
+		height: 20px;
+	}
+	/* notification bell and profile picture */
+	.notification-bell{
+		margin-top: 1px;
+	}
+	.profile-picture {
+		margin-top: 8px;
+	}
+	/* this is the image in the footer section of the page. due to less space, it has to be removed at such lower resolutions. */
+	/* there is another option, but it will look messy and small */
+
+
+	#song-image {
+		display: none;
+	}
+	footer .song-desc .name{
+		font-size: 10px;
+		font-weight: 700;
+	}
+	footer .song-desc .auth{
+		font-size: 8px;
+	}
+	footer .player .controls{
+		font-size: 10px;
+	}
+	.theme-main {
+		width: 100%;
+	}
+	/* theme content */
+	.theme-content {
+		width: 25vw;
+		height: 10vw;
+	}
+	.theme-content p {
+		font-size: 4.5vw;
+		top: -18.8vw;
+		margin-left: -2px;
+	}
+	.music-themes div img {
+		width: 18vw;
+		height: 18vw;
+	}
+
+	/* stations */
+
+	.outer-div .inner-div span {
+		font-size: 6vw;
+		font-weight: 500;
+	}
+	.language-heading{
+		font-size: 20px;
+	}
+	.language .language-content img{
+		width: 100px;
+		height: 100px;
+	}
+	.english .language-content{
+		display: grid;
+  		grid-template-columns: auto auto auto;
+		grid-gap: 5px;
+		margin: 0px 20px;
+	}
+	.english .language-content .name{
+		font-size: 15px;
+	}
+	.english .language-content .date{
+		font-size: 10px;
+	}
+	.hindi .language-content{
+		display: grid;
+  		grid-template-columns: auto auto auto;
+		grid-gap: 5px;
+		margin: 0px 20px;
+	}
+	.hindi .language-content .name{
+		font-size: 15px;
+	}
+	.hindi .language-content .date{
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 550px) {
+	/* this is the most important media query */
+	/* navigation bar section */
+	/* website image */
+	.website-logo img {
+		height: 30px;
+		width: 30px;
+	}
+	/* website name */
+	.website-name h2 {
+		font-size: 14px;
+	}
+	/* website name */
+	.website-name h6 {
+		font-size: 8px;
+	}
+	/* notification bell */
+	.notification-bell img {
+		width: 20px;
+		height: 20px;
+	}
+	/* profile picture */
+	.profile-picture img {
+		width: 20px;
+		height: 20px;
+	}
+	/* notification bell and profile picture */
+	.notification-bell{
+		margin-top: 1px;
+	}
+	.profile-picture {
+		margin-top: 8px;
+	}
+	.outer-carousel{
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  		box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  		height: auto;
+		overflow: hidden;
+		margin-left: -70px;
+	}
+	.carousel img{
+		width: 100px;
+	}
+	
+	.latest-release{
+		position:relative;
+		margin-top: 250px;
+	}
+	/* this is the image in the footer section of the page. due to less space, it has to be removed at such lower resolutions. */
+	/* there is another option, but it will look messy and small */
+
+
+	#song-image {
+		display: none;
+	}
+	footer .song-desc .name{
+		font-size: 10px;
+		font-weight: 700;
+	}
+	footer .song-desc .auth{
+		font-size: 8px;
+	}
+	footer .player .controls{
+		font-size: 10px;
+	}
+	.theme-main {
+		width: 100%;
+	}
+	/* theme content */
+	.theme-content {
+		width: 25vw;
+		height: 10vw;
+	}
+	.theme-content p {
+		font-size: 4.5vw;
+		top: -18.8vw;
+		margin-left: -2px;
+	}
+	.music-themes div img {
+		width: 18vw;
+		height: 18vw;
+	}
+
+	/* stations */
+
+	.outer-div .inner-div span {
+		font-size: 6vw;
+		font-weight: 500;
+	}
+	.language-heading{
+		font-size: 20px;
+	}
+	.language .language-content img{
+		width: 100px;
+		height: 100px;
+	}
+	.english .language-content{
+		display: grid;
+  		grid-template-columns: auto auto auto;
+		grid-gap: 5px;
+		margin: 0px 20px;
+	}
+	.english .language-content .name{
+		font-size: 15px;
+	}
+	.english .language-content .date{
+		font-size: 10px;
+	}
+	.hindi .language-content{
+		display: grid;
+  		grid-template-columns: auto auto auto;
+		grid-gap: 5px;
+		margin: 0px 20px;
+	}
+	.hindi .language-content .name{
+		font-size: 15px;
+	}
+	.hindi .language-content .date{
+		font-size: 10px;
+	}
+	.circle{
+		margin-left: 10px;
+	}
+}
+@media screen and (max-width: 380px){
+	.theme-main {
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: -10px;
+		height: 450px;
+	}
+	/* theme content */
+	.theme-content {
+		width: 30vw;
+		height: 10vw;
+	}
+	.theme-content p {
+		font-size: 4.5vw;
+		top: -18.8vw;
+		text-align: center;
+		justify-content: center;
+		margin-top: 55px;
+		margin-left: 2px;
+	}
+	.carousel img{
+		width: 82px;
+	}
+}
